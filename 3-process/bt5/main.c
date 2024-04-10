@@ -2,6 +2,7 @@
 #include<unistd.h>
 #include<sys/types.h>
 #include<stdlib.h>
+#include<sys/wait.h>
 
 int main(){
     pid_t child_pid = -1;
@@ -18,10 +19,11 @@ int main(){
     else{
         printf("****************\n");
         printf("We are in parent process with pid: %d\n", getpid());
-        printf("****************\n");
+        // wait for a process end
+        
         
     }
-    printf("where am I, my pid %d\n", getpid());
+    //printf("where am I, my pid %d\n", getpid());
 
     return 0;
 }
